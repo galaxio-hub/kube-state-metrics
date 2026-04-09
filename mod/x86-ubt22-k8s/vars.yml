@@ -1,0 +1,68 @@
+immutable:
+- name: KUBE_STATE_METRICS_IMAGE_REGISTRY
+  value: registry.k8s.io
+- name: KUBE_STATE_METRICS_IMAGE_REPOSITORY
+  value: kube-state-metrics/kube-state-metrics
+- name: KUBE_STATE_METRICS_IMAGE_TAG
+  value: v2.15.0
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_IMAGE_REGISTRY
+  value: quay.io
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_IMAGE_REPOSITORY
+  value: brancz/kube-rbac-proxy
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_IMAGE_TAG
+  value: v0.19.0
+
+module:
+- name: APP_NAME
+  value: kube-state-metrics
+- name: NAMESPACE
+  value: "monitor"
+- name: IMAGE_REGISTRY
+  value: ""
+- name: IMAGE_PULL_SECRET
+  value: "demo"
+- name: KUBE_STATE_METRICS_PROMETHEUS_SCRAPE
+  value: true
+- name: KUBE_STATE_METRICS_AUTOSHARDING_ENABLED
+  value: false
+- name: KUBE_STATE_METRICS_REPLICAS
+  value: 1
+- name: KUBE_STATE_METRICS_REVISION_HISTORY_LIMIT
+  value: 10
+- name: KUBE_STATE_METRICS_AUTOMOUNT_SERVICE_ACCOUNT_TOKEN  
+  value: true
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_ENABLED
+  value: false
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_RESOURCES_LIMITS_CPU
+  value: 100m
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_RESOURCES_LIMITS_MEMORY
+  value: 64Mi
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_RESOURCES_REQUESTS_CPU
+  value: 10m
+- name: KUBE_STATE_METRICS_KUBE_RBAC_PROXY_RESOURCES_REQUESTS_MEMORY
+  value: 32Mi
+
+
+
+system:
+- name: RUNTIME
+  value: containerd
+- name: AIR_GAPPED
+  value: false
+- name: KUBECONFIG
+  value: ~/.kube/config
+- name: STORAGE_CLASS
+  value: ""
+
+  
+
+
+
+
+
+
+
+
+
+
+
